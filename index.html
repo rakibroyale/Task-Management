@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management</title>
+  </head>
+  <body>
+    <!-- Main app wrapper -->
+    <div class="app-shell">
+      <!-- Header section -->
+      <header class="app-header">
+        <div class="brand">
+          <!-- Logo section -->
+          <span class="brand-mark">TM</span>
+          <!-- Header title -->
+          <span class="brand-text">Task Management</span>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="main-nav" aria-label="primary">
+          <button
+            class="nav-link"
+            data-view-target="dashboardView"
+            type="button"
+          >
+            Dashboard
+          </button>
+
+          <button class="nav-link" data-view-target="tasksView" type="button">
+            Tasks
+          </button>
+
+          <button class="nav-link" data-view-target="addTaskView" type="button">
+            Add Task
+          </button>
+        </nav>
+
+        <!-- User display and logout button -->
+        <div class="user-area">
+          <span id="currentUsername" class="user-name"></span>
+          <button id="logoutBtn" class="btn btn-ghost" type="button">
+            Logout
+          </button>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
