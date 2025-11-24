@@ -44,6 +44,58 @@
           </button>
         </div>
       </header>
+
+      <!-- Main application area -->
+      <main class="app-main"></main>
+      <!-- Login view -->
+      <section
+        id="loginView"
+        class="view view-active"
+        aria-labelledby="loginHeading"
+      >
+        <div class="auth-layout">
+          <div class="auth-card">
+            <h1 id="loginHeading" class="view-title">Task Manager</h1>
+            <p class="view-subtitle">
+              Enter any username and password to continue.
+            </p>
+
+            <!-- Login form -->
+            <form id="loginForm" class="form-grid">
+              <!-- Username field -->
+              <label class="form-field">
+                <span class="field-label">Username</span>
+                <input
+                  id="loginUsername"
+                  type="text"
+                  autocomplete="username"
+                  required
+                  class="field-input"
+                  placeholder="e.g. alex"
+                />
+              </label>
+
+              <!-- Password field -->
+              <label class="form-field">
+                <span class="field-label">Password</span>
+                <input
+                  id="loginPassword"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                  class="field-input"
+                  placeholder="Enter any password"
+                />
+              </label>
+
+              <!-- Submit button -->
+              <button class="btn btn-primary full-width" type="submit">
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
