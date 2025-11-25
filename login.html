@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <main class="app-main">
+        <section class="auth-layout">
+          <div class="auth-card">
+            <h1 class="view-title">Login</h1>
+            <p class="view-subtitle">
+              Enter any username and password to continue.
+            </p>
+
+            <form id="loginForm" class="form-grid">
+              <label class="form-field">
+                <span class="field-label">Username</span>
+                <input
+                  id="loginUsername"
+                  type="text"
+                  autocomplete="username"
+                  required
+                  class="field-input"
+                  placeholder="e.g. alex"
+                />
+              </label>
+
+              <label class="form-field">
+                <span class="field-label">Password</span>
+                <input
+                  id="loginPassword"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                  class="field-input"
+                  placeholder="Enter any password"
+                />
+              </label>
+
+              <button class="btn btn-primary full-width" type="submit">
+                Sign in
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script src="common.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
