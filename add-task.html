@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add task</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark">TM</span>
+          <span class="brand-text">TASK MANAGEMENT</span>
+        </div>
+
+        <nav class="main-nav" aria-label="Primary">
+          <a href="dashboard.html" class="nav-link">Dashboard</a>
+          <a href="tasks.html" class="nav-link">Tasks</a>
+          <a href="add-task.html" class="nav-link nav-link-active">Add Task</a>
+        </nav>
+
+        <div class="user-area">
+          <span id="currentUsername" class="user-name"></span>
+          <button id="logoutBtn" class="btn btn-ghost" type="button">
+            Logout
+          </button>
+        </div>
+      </header>
+
+      <main class="app-main">
+        <div class="page-header">
+          <div>
+            <h1 class="view-title">Add task</h1>
+            <p class="view-subtitle">
+              Create a new task with details, priority, and schedule
+            </p>
+          </div>
+        </div>
+
+        <section class="panel">
+          <form id="addTaskForm" class="form-grid">
+            <label class="form-field span-2">
+              <span class="field-label">Title *</span>
+              <input id="addTitle" type="text" class="field-input" required />
+            </label>
+
+            <label class="form-field span-2">
+              <span class="field-label">Description</span>
+              <textarea
+                id="addDescription"
+                class="field-input field-textarea"
+                rows="3"
+              ></textarea>
+            </label>
+
+            <label class="form-field">
+              <span class="field-label">Status</span>
+              <select id="addStatus" class="field-input">
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span class="field-label">Priority</span>
+              <select id="addPriority" class="field-input">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span class="field-label">Category</span>
+              <input
+                id="addCategory"
+                type="text"
+                class="field-input"
+                placeholder="Work, Personal, etc."
+              />
+            </label>
+
+            <label class="form-field">
+              <span class="field-label">Due date</span>
+              <input id="addDueDate" type="date" class="field-input" />
+            </label>
+
+            <label class="form-field">
+              <span class="field-label">Recurring</span>
+              <select id="addRecurringInterval" class="field-input">
+                <option value="none">Not recurring</option>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </label>
+
+            <div class="form-actions span-2">
+              <a href="tasks.html" class="btn btn-secondary">Cancel</a>
+              <button class="btn btn-primary" type="submit">Save task</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script src="common.js"></script>
+    <script src="add-task.js"></script>
+  </body>
+</html>
